@@ -1,7 +1,7 @@
 # Elegant database query builder for connecting to FileMaker databases
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/theprivateer/filemaker.svg?style=flat-square)](https://packagist.org/packages/theprivateer/filemaker)
-[![Total Downloads](https://img.shields.io/packagist/dt/theprivateer/filemaker.svg?style=flat-square)](https://packagist.org/packages/theprivateer/filemaker)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/privateer/filemaker.svg?style=flat-square)](https://packagist.org/packages/privateer/filemaker)
+[![Total Downloads](https://img.shields.io/packagist/dt/privateer/filemaker.svg?style=flat-square)](https://packagist.org/packages/privateer/filemaker)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
