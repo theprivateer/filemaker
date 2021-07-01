@@ -27,7 +27,7 @@
     "autoload": {
         "psr-4": {
             "Privateer\\FileMaker\\": "src"
-        }re
+        }
     },
     "autoload-dev": {
         "psr-4": {
