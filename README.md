@@ -3,7 +3,11 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/theprivateer/filemaker.svg?style=flat-square)](https://packagist.org/packages/theprivateer/filemaker)
 [![Total Downloads](https://img.shields.io/packagist/dt/theprivateer/filemaker.svg?style=flat-square)](https://packagist.org/packages/theprivateer/filemaker)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This is an elegant object-orientated approach to dealing with FileMaker databases from PHP applications, very heavily inspired by the [database query builder](https://laravel.com/docs/8.x/queries) found in Laravel.
+
+It also allows you to effortlessly switch between the traditional XML-based FMPHP connection method and the newer FMREST Data API.
+
+The list of supported queries is still a bit limited, but does allow for some fairly complex requests under the hood.  Over time I will be adding more query types to the package.
 
 ## Installation
 
@@ -16,14 +20,28 @@ composer require theprivateer/filemaker
 ## Usage
 
 ```php
-// Usage description here
+$config = [
+    'driver'	=> 'fmphp',
+    'host'      => '127.0.0.1',
+    'file'      => 'DatabaseName',
+    'user'      => 'admin',
+    'password'  => 'someP@ssword',
+];
+
+$fm = new Privateer\FileMaker\FileMaker($config);
+
+$user = $fm->layout('users')->where('username', 'privateer')->first();
+
+$newUser = $fm->layout('users')->insert([
+    'name'      => 'John Doe',
+    'username'  => 'johndoe',
+    'email'     => 'john@example.com'
+]);
 ```
 
 ### Testing
 
-```bash
-composer test
-```
+I'm working on test coverage - watch this space!
 
 ### Changelog
 

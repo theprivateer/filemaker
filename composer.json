@@ -2,10 +2,10 @@
     "name": "theprivateer/filemaker",
     "description": "Database query-builder for FileMaker databases",
     "keywords": [
-        "privateer",
+        "theprivateer",
         "filemaker"
     ],
-    "homepage": "https://github.com/privateer/filemaker",
+    "homepage": "https://github.com/theprivateer/filemaker",
     "license": "MIT",
     "type": "library",
     "authors": [

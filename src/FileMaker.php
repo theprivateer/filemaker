@@ -2,7 +2,6 @@
 
 namespace Privateer\FileMaker;
 
-use Privateer\FileMaker\Drivers\DataAPI;
 use Privateer\FileMaker\Drivers\FMPHP;
 use Privateer\FileMaker\Drivers\FMREST;
 use Privateer\FileMaker\Exceptions\FileMakerConnectionException;
@@ -99,6 +98,9 @@ class FileMaker
         $this->driver->setConnection($this->config);
     }
 
+    /**
+     *
+     */
     private function bootFMRESTDriver()
     {
         // Boot up a new instance of DataAPI and assign to $this->driver
@@ -107,9 +109,9 @@ class FileMaker
         $this->driver->setConnection($this->config);
     }
 
-    // Magic method to call all methods on the underlying $driver
-
     /**
+     * Magic method to call all methods on the underlying $driver
+     *
      * @param $method
      * @param $parameters
      *
