@@ -1,0 +1,44 @@
+{
+    "name": "privateer/filemaker",
+    "description": "Database query-builder for FileMaker databases",
+    "keywords": [
+        "privateer",
+        "filemaker"
+    ],
+    "homepage": "https://github.com/privateer/filemaker",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Phil Stephens",
+            "email": "phils@hey.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "airmoi/filemaker": "^2.3",
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Privateer\\FileMaker\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Privateer\\FileMaker\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
