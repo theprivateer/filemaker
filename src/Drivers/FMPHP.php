@@ -4,7 +4,7 @@ namespace Privateer\FileMaker\Drivers;
 
 
 use airmoi\FileMaker\FileMaker;
-use Privateer\Filemaker\Exceptions\FileMakerConnectionException;
+use Privateer\FileMaker\Exceptions\FileMakerConnectionException;
 use Privateer\FileMaker\FileMakerRecord;
 
 class FMPHP implements FileMakerDriver
@@ -66,6 +66,27 @@ class FMPHP implements FileMakerDriver
     public function layout($layout)
     {
         $this->layout = $layout;
+
+        $this->flush();
+
+        return $this;
+    }
+
+    public function flush()
+    {
+        $this->where = [];
+
+        $this->whereNot = [];
+
+        $this->whereIn = [];
+
+        $this->take;
+
+        $this->skip = 0;
+
+        $this->order = [];
+
+        $this->randomOrder = false;
 
         return $this;
     }

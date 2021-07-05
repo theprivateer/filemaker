@@ -42,6 +42,27 @@ class FMREST implements FileMakerDriver
     {
         $this->layout = $layout;
 
+        $this->flush();
+
+        return $this;
+    }
+
+    public function flush()
+    {
+        $this->where = [];
+
+        $this->whereNot = [];
+
+        $this->whereIn = [];
+
+        $this->take;
+
+        $this->skip = 0;
+
+        $this->order = [];
+
+        $this->randomOrder = false;
+
         return $this;
     }
 
